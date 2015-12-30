@@ -318,5 +318,14 @@ CMD ["/main"]
 But - if I have nginx or haproxy handling ssl termination - won't need that for serving.  Once I get better at using official images - and attaching persistant storage - I'll write a go rest api app, something minimal that talks to a mongodb container.
 
 
+--name : using this flag I can name my containers...
+
+```
+docker run --name goapp3 -d -p 8082:8080 aliwatters/go-app:1.0.0
+```
+
+
+Note: because I have no OS layer in my docker container I cannot shell into it - even if I add `-t -i` there is nothing.
+
 
 
