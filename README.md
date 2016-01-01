@@ -395,3 +395,7 @@ Trying again this time with Alpine (minimal images please!)
 
 The course is use massive java based images and containers - not a fan.
 
+OK - enough with this course - stumbled on a docker produced course - that uses machine, swarm compose etc - for free on youtube;
+
+https://www.youtube.com/watch?v=bV5vbNK3Uhw&list=PLkA60AVN3hh_6cAz8TUGtkYbJSL2bdZ4h
+
