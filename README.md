@@ -343,6 +343,55 @@ Nice that works just fine.
 
 ## Section 4 - advanced concepts
 
+* Provisioning
+* Orchestration
+* Automation
+
+### Provisioning Scripts
+
+Course is suggesting vagrant - I can use vagrant on ubuntu - linux debian 64bit available. Following through - maybe the advantages will become clear.
 
 
+#### Installing Vagrant on Ubunutu
+
+http://www.olindata.com/blog/2014/07/installing-vagrant-and-virtual-box-ubuntu-1404-lts -- followed roughly
+
+```
+ wget https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1_x86_64.deb # didn't use - but that's one option
+ sudo apt-get install virtualbox
+ sudo apt-get install vagrant
+```
+
+Environment Vars - adding to .profile
+```
+export VAGRANT_HOME=/home/ali/vagrant
+```
+
+Note: vagrant must be version 1.7.1+
+```
+ali@pluto:~/git/docker-course-01/vagrant-app$ vagrant --version
+Vagrant 1.7.4
+```
+
+
+So using my Scratch based Go app - means that things don't quite work.
+
+```
+Bringing machine 'docextended' up with 'docker' provider...
+==> docextended: Image is already built from the Dockerfile. `vagrant reload` to rebuild.
+==> docextended: Creating the container...
+    docextended:   Name: docextended
+    docextended:  Image: 0c09a9aa8bd9
+    docextended:    Cmd: /main
+    docextended: Volume: /home/ali/git/docker-course-01/vagrant-app:/vagrant
+    docextended:   Port: 8080:8080
+    docextended:  
+    docextended: Container created: 4454bd6f526ce277
+==> docextended: Starting container...
+==> docextended: Provisioners will not be run since container doesn't support SSH.
+```
+
+Trying again this time with Alpine (minimal images please!)
+
+The course is use massive java based images and containers - not a fan.
 

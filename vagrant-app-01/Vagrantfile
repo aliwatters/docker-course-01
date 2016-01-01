@@ -1,0 +1,14 @@
+ENV['VAGRANT_DEFAULT_PROVIDER'] = 'docker'
+
+Vagrant.configure("2") do |config|
+	config.vm.define "alpine-01" do |a|
+		a.vm.provider "docker" do |d|
+			d.build_dir = "."
+			d.build_args = ["-t=alpine-01"]
+			d.ports = ["8081:8080"]
+			d.name = "alpine-01"
+			d.remains_running = true
+			d.cmd = ["/main"]
+		end
+	end
+end
